@@ -8,7 +8,7 @@ public class ShoppingCartPageLocators {
 
 	public static By updateShoppingCartButton = By.xpath("//input[@name='updatecart']");
 
-	public static By emptyShoppingCart = By.xpath("//div[@class='page-body']/div");
+	public static By emptyShoppingCart = By.xpath("//div[contains(text(),'Your Shopping Cart is empty!')]");
 
 	public static By productName = By.xpath("//a[@class='product-name']");
 

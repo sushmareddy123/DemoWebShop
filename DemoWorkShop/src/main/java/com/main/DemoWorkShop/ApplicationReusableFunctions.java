@@ -3,6 +3,7 @@ package com.main.DemoWorkShop;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -158,7 +159,7 @@ public class ApplicationReusableFunctions extends TestBase {
 	public void shippingSameAsBillingAddress(By locator) {
 		Select sel = new Select(driver.findElement(locator));
 		List<WebElement> dropDownOptions = sel.getOptions();
-		int modifiedSize = dropDownOptions.size() - 1;
+		int modifiedSize = dropDownOptions.size() - 2;
 		sel.selectByIndex(modifiedSize);
 
 	}
@@ -169,9 +170,16 @@ public class ApplicationReusableFunctions extends TestBase {
 	public static void clearShoppingCart() {
 
 		driver.findElement(HomePageLocators.shoppingCartLink).click();
-		boolean flag = driver.findElement(ShoppingCartPageLocators.emptyShoppingCart).isDisplayed();
-		System.out.println("Flag value" + flag);
-		if (flag == true) {
+		try {
+		//boolean flag = driver.findElement(ShoppingCartPageLocators.emptyShoppingCart).isDisplayed();
+			if(driver.findElement(ShoppingCartPageLocators.emptyShoppingCart).isDisplayed())
+			{
+				System.out.println("Shopping Cart is empty no products to clear");
+			}
+		}
+
+		//if (flag == false) 
+			catch(NoSuchElementException exc) {
 			List<WebElement> removefromcartlist = driver.findElements(ShoppingCartPageLocators.removeFromCart);
 			for (WebElement removeInputCheckbox : removefromcartlist) {
 				removeInputCheckbox.click();
@@ -179,11 +187,11 @@ public class ApplicationReusableFunctions extends TestBase {
 			driver.findElement(ShoppingCartPageLocators.updateShoppingCartButton).click();
 			System.out.println("Shopping cart cleared");
 
-		} else {
-			System.out.println("Shopping Cart is empty");
+		} //else {
+			//System.out.println("Shopping Cart is empty");
 
 		}
 
 	}
 
-}
+

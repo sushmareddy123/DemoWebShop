@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="50630" started-at="2020-11-22T14:22:53Z" finished-at="2020-11-22T14:23:44Z">
+  <suite name="Default suite" duration-ms="40085" started-at="2020-11-23T18:37:21 IST" finished-at="2020-11-23T18:38:01 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="50630" started-at="2020-11-22T14:22:53Z" finished-at="2020-11-22T14:23:44Z">
+    <test name="Default test" duration-ms="40085" started-at="2020-11-23T18:37:21 IST" finished-at="2020-11-23T18:38:01 IST">
       <class name="com.scripts.DemoWorkShop.DemoWorkShopFunction">
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.scripts.DemoWorkShop.DemoWorkShopFunction@1d057a39]" name="initialization" is-config="true" duration-ms="15616" started-at="2020-11-22T19:52:53Z" finished-at="2020-11-22T19:53:09Z">
+        <test-method status="PASS" signature="initialization()[pri:0, instance:com.scripts.DemoWorkShop.DemoWorkShopFunction@17579e0f]" name="initialization" is-config="true" duration-ms="13881" started-at="2020-11-23T18:37:21 IST" finished-at="2020-11-23T18:37:35 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialization -->
-        <test-method status="PASS" signature="endToEndScenario()[pri:0, instance:com.scripts.DemoWorkShop.DemoWorkShopFunction@1d057a39]" name="endToEndScenario" duration-ms="34803" started-at="2020-11-22T19:53:09Z" finished-at="2020-11-22T19:53:44Z">
+        <test-method status="PASS" signature="endToEndScenario()[pri:0, instance:com.scripts.DemoWorkShop.DemoWorkShopFunction@17579e0f]" name="endToEndScenario" duration-ms="25452" started-at="2020-11-23T18:37:35 IST" finished-at="2020-11-23T18:38:00 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endToEndScenario -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.scripts.DemoWorkShop.DemoWorkShopFunction@17579e0f]" name="closeBrowser" is-config="true" duration-ms="686" started-at="2020-11-23T18:38:00 IST" finished-at="2020-11-23T18:38:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
       </class> <!-- com.scripts.DemoWorkShop.DemoWorkShopFunction -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
